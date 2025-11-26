@@ -1,8 +1,8 @@
 <?php
-//登录逻辑主要获取$_SESSION['uid']
+//登录逻辑主要获取$_SESSION['oauth_uid']
 session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $_SESSION['uid'] = 1;
+    $_SESSION['oauth_uid'] = 1;
 }
 ?>
 <!DOCTYPE html>
