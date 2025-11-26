@@ -52,7 +52,7 @@ class Oauth{
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
-        return $_SESSION['uid'] ?? null;
+        return $_SESSION['oauth_uid'] ?? null;
     }
     /**
      * 重定向到登录页，并携带返回地址
