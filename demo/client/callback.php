@@ -1,7 +1,7 @@
 <?php
 define('CLIENT_ID',     '应用ID');
 define('CLIENT_SECRET', '应用密钥');
-define('REDIRECT_URI',  '回调地址http://xxxx/client/callback');
+define('REDIRECT_URI',  urlencode('回调地址http://xxxx/client/callback'));
 define('OAUTH_SERVER',  '请求地址http://xxxx/server/index');
 session_start();
 if (!hash_equals($_GET['state'] ?? '', $_SESSION['oauth_state'] ?? '')) {
