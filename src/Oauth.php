@@ -32,6 +32,10 @@ class Oauth{
                 list($key, $value) = explode('=', $pair, 2);
                 $key = urldecode($key);
                 $value = urldecode($value);
+                if($key=="redirect_uri"):
+                    //双重解密
+                    $value=urldecode($value);
+                endif;
                 $params[$key] = $value;
             }
         }
